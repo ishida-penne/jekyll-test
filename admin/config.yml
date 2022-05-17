@@ -1,19 +1,14 @@
 backend:
   name: git-gateway
-  branch: master 
-locale: 'ja' #メッセージが日本語化
-media_folder: "content/blog"
-public_folder : "/media" 
+media_folder: "img/uploads" # Folder where user uploaded files should go
 
-publish_mode: edjitorial_workflow
-collections:
-  - name: "Blog" 
-    label: "Blog"
-    folder: "docs/Blog"
-    create: true
-    slug: "{{slug}}" #ファイル名になる
-    editor:
-    preview: true #CMSの編集画面にプレビューがつく
-    fields:
-      - {label: "Title", name: "title", widget: "string"} 
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Foo", name: "foo", widget: "foo"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
