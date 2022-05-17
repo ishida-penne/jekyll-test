@@ -1,15 +1,13 @@
-# GitHubのブランチ指定
  backend:
    name: git-gateway
      branch: master 
      locale: 'ja' #メッセージが日本語化
      media_folder: ".vuepress/public/media" # 画像ファイルの格納場所を指定
      public_folder : "/media" #公開する際の画像フォルダのパスを指定
-#
-#     # NetlifyCMSの編集画面をフロー化
+
+     # NetlifyCMSの編集画面をフロー化
      publish_mode: editorial_workflow
-#
-#     # 編集オブジェクト
+
      collections:
        - name: "Blog" 
            label: "Blog"
