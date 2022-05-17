@@ -1,5 +1,5 @@
  backend:
-   name: git-gateway
+     name: git-gateway
      branch: master 
      locale: 'ja' #メッセージが日本語化
      media_folder: ".vuepress/public/media" # 画像ファイルの格納場所を指定
